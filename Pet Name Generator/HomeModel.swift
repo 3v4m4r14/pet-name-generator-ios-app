@@ -17,7 +17,6 @@ class HomeModel: NSObject {
     var delegate:HomeModelDelegate?
 
     func getPetNamePhrase() {
-        print("Getting pet name phrase...")
         
         var adjLen = 0
         var nounLen = 0
@@ -27,7 +26,6 @@ class HomeModel: NSObject {
         let operationQueue = OperationQueue()
         
         let pollingForListSizes = BlockOperation {
-            print("polling for size")
             // Get adjective table length
             adjLen = self.getLen(urlString: "https://evamaria.info/api/petname/adjective/size.php")
             
@@ -36,7 +34,6 @@ class HomeModel: NSObject {
         }
     
         let pollingForWords = BlockOperation {
-            print("polling for words")
             // Hit the adjective web service URL
             adjective = self.getRandomWord(type: "adjective", collectionSize: adjLen)
             
@@ -44,13 +41,9 @@ class HomeModel: NSObject {
             noun = self.getRandomWord(type: "noun", collectionSize: nounLen)
         }
         
-        print("Lengths: ", adjLen)
-        
         let passingPhraseToViewController = BlockOperation {
-            print("Phrase is ", adjective+noun)
             // Parse it into a Phrase struct
             let phrase = Phrase(adjective: adjective, noun: noun)
-            print(phrase.toString())
             // Notify the view controller and pass the data back
             DispatchQueue.main.async {
                 self.delegate?.itemsDownloaded(phrase: phrase)
@@ -68,23 +61,19 @@ class HomeModel: NSObject {
     func getRandomWord(type:String, collectionSize:Int) -> String {
         var word = ""
         let id = getRandomIndex(max: collectionSize)
-        print("ID: ", id)
         
         let urlString = "https://evamaria.info/api/petname/\(type)/readone.php?id=\(id)"
-        print("URL: ", urlString)
+
         // Hit the web service url and download JSON data
-        guard let url = URL(string: urlString) else {
-            print("oops")
-            return word }
-        print("Kaka")
+        guard let url = URL(string: urlString) else { return word }
+
         let group2 = DispatchGroup()
         group2.enter()
-        print("noku")
+
         //Create a URL session
         URLSession.shared.dataTask(with: url, completionHandler: {(data, response, error) in
             if let data = data {
                 //Succeeded
-                print("I'm here banananana")
                 word = self.parseWordJSON(data: data)
                 group2.leave()
             }
@@ -93,7 +82,6 @@ class HomeModel: NSObject {
             }
             }).resume()
         group2.wait()
-        print(word)
         return word
     }
     
@@ -129,7 +117,6 @@ class HomeModel: NSObject {
             }
             }).resume()
         group.wait()
-        print("Size: ", length)
         return length
     }
     
