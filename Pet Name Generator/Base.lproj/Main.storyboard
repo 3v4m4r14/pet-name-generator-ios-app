@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pet_Name_Generator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIU-tN-MRl">
+                                <rect key="frame" x="30" y="74" width="354" height="758"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TopGradient" translatesAutoresizingMaskIntoConstraints="NO" id="Lq5-kw-iFL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="358.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BottomGradient" translatesAutoresizingMaskIntoConstraints="NO" id="aUX-QR-QDY">
+                                <rect key="frame" x="0.0" y="537.5" width="414" height="358.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.26345180457746481" green="0.6946137764084509" blue="0.93521676936619713" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GIU-tN-MRl" secondAttribute="bottom" constant="30" id="18b-sb-qeC"/>
+                            <constraint firstAttribute="bottom" secondItem="aUX-QR-QDY" secondAttribute="bottom" id="6uc-cH-7ne"/>
+                            <constraint firstAttribute="trailing" secondItem="aUX-QR-QDY" secondAttribute="trailing" id="9Pi-z2-smi"/>
+                            <constraint firstItem="aUX-QR-QDY" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="AC5-em-yXl"/>
+                            <constraint firstItem="aUX-QR-QDY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GAq-AG-fIj"/>
+                            <constraint firstItem="Lq5-kw-iFL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Onh-4h-Tk8"/>
+                            <constraint firstItem="GIU-tN-MRl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="XIm-o3-Jzl"/>
+                            <constraint firstItem="GIU-tN-MRl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="nfJ-hc-avf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GIU-tN-MRl" secondAttribute="trailing" constant="30" id="oFm-HI-8Ad"/>
+                            <constraint firstAttribute="trailing" secondItem="Lq5-kw-iFL" secondAttribute="trailing" id="vRy-2y-yZ6"/>
+                            <constraint firstItem="Lq5-kw-iFL" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="x3M-4m-UTD"/>
+                            <constraint firstItem="Lq5-kw-iFL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ye0-XM-RsG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="petNameLabel" destination="GIU-tN-MRl" id="jHc-w0-tc8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="130"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BottomGradient" width="414" height="298"/>
+        <image name="TopGradient" width="414" height="380"/>
+    </resources>
+</document>
