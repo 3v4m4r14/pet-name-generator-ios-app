@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A6F6842A245C962F00C24B57"
-               BuildableName = "Pet Name Generator.app"
+               BuildableName = "SaMu.app"
                BlueprintName = "Pet Name Generator"
                ReferencedContainer = "container:Pet Name Generator.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A6F6842A245C962F00C24B57"
-            BuildableName = "Pet Name Generator.app"
+            BuildableName = "SaMu.app"
             BlueprintName = "Pet Name Generator"
             ReferencedContainer = "container:Pet Name Generator.xcodeproj">
          </BuildableReference>
@@ -63,7 +63,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A6F6842A245C962F00C24B57"
-            BuildableName = "Pet Name Generator.app"
+            BuildableName = "SaMu.app"
             BlueprintName = "Pet Name Generator"
             ReferencedContainer = "container:Pet Name Generator.xcodeproj">
          </BuildableReference>
